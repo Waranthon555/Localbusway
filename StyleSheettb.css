@@ -1,0 +1,42 @@
+﻿table, th {
+    border: 3px solid black;
+    border-collapse: collapse;
+    text-align: center;
+    border-color: indigo;
+    font-family: Kanit;
+    padding: 4px;
+}
+
+table, td {
+    border-color: indigo;
+    border: 3px solid black;
+    border-collapse: collapse;
+    text-align: center;
+}
+table, th1 {
+    border: 3px solid black;
+    border-collapse: collapse;
+    text-align: center;
+    border-color: indigo;
+    font-family: Kanit;
+    padding: 4px;
+}
+
+table, td1 {
+    border-color: indigo;
+    border: 3px solid white;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+h2 {
+    display: block;
+    font-size: 1.5em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    font-family: Kanit;
+    text-align: center;
+}

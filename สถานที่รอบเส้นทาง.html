@@ -1,0 +1,383 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <title>สถานที่รอบเส้นทาง</title>
+    <link rel="stylesheet" href="StyleSheet2.css" />
+    <style>
+        body {
+            margin: 0;
+            font-size: 35px;
+            font-family: Kanit;
+            color: indigo;
+            background-image: url('bg1.jpg');
+            background-repeat: no-repeat;
+        }
+
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 40px 100px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: 0.6s;
+            z-index: 100000;
+            font-family: Kanit;
+            background-color: indigo;
+            overflow: hidden;
+        }
+
+        .logo {
+            position: relative;
+            font-size: 1.7em;
+            cursor: default;
+            color: whitesmoke;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: 0.6s;
+            display: inline-block;
+        }
+
+        #navbar {
+            height: 75px;
+            overflow: hidden;
+            background-color: indigo;
+        }
+
+            #navbar a {
+                float: right;
+                height: 75px;
+                display: block;
+                color: #f2f2f2;
+                text-align: center;
+                padding: 18px 16px;
+                text-decoration: none;
+                font-size: 20px;
+            }
+
+                #navbar a:hover {
+                    background-color: #ddd;
+                    color: black;
+                }
+
+        .content1 {
+            padding: 75px;
+        }
+
+        .sticky {
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }
+
+            .sticky + .content1 {
+                padding-top: 60px;
+            }
+
+        button {
+            background-color: indigo;
+            border: 2px solid whitesmoke;
+            border-radius: 40px;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-family: Kanit;
+            font-size: medium;
+            font-weight: 600;
+            margin: 50px;
+            padding: 10px 50px;
+            transition-duration: 0.4s;
+            cursor: pointer;
+        }
+
+            button:hover {
+                background: #808080;
+                color: black;
+            }
+
+    </style>
+    
+</head>
+
+<body>
+    <header>
+        <div id="navbar">
+            <a href="ข้อมูลติดต่อ.html"><href ="javascript:void(0)">ข้อมูลติดต่อ</a>
+            <a href="สถานที่รอบเส้นทาง.html"><href ="javascript:void(0)">สถานที่รอบเส้นทาง</a>
+            <a href="แผนที่เส้นทางการเดินรถ.html"><href ="javascript:void(0)">แผนที่เส้นทางการเดินรถ</a>
+            <a href="หน้าแรก.html"><href ="javascript:void(0)">หน้าแรก</a>
+
+            <div class="logo">
+                <a href="หน้าแรก.html" style="text-decoration: none; color: whitesmoke; background: none;"><img src="logo6.png" alt=""></a>
+            </div>
+        </div>
+    </header>
+    <div class="content1">
+        <center>
+            <h3>สถานที่รอบเส้นทาง</h3>
+            <body1>
+                <div class="card-container">
+
+                    <!--1-->
+                    <div class="card">
+                        <a href="https://maps.app.goo.gl/gTpnMYYUQR51mKbV9" style="color:crimson; text-decoration: none;">
+                            <img src="สวนศรีเมือง.jpg" />
+                        </a>
+                        <div class="card-content">
+                            <h3>สวนศรีเมือง</h3>
+                            <p>
+                                สวนศรีเมืองเป็นสวนสาธารณะกลางเมืองระยอง<br />เป็นสถานที่ออกกำลังกาย และมีกิจกรรม<br />ให้ทำได้หลายอย่าง
+                                <br /><br />
+                                <a href="https://maps.app.goo.gl/gTpnMYYUQR51mKbV9" style="color:crimson; text-decoration: none;">พิกัด : ต.ท่าประดู่ อ.เมืองระยอง จ.ระยอง</a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!--2-->
+                    <div class="card">
+                        <a href="https://goo.gl/maps/Nu6dmY2iA7P2" style="color:crimson; text-decoration: none;">
+                            <img src="วัดป่าประดู่.jpg" />
+                        </a>
+                        <div class="card-content">
+                            <h3>วัดป่าประดู่</h3>
+                            <p>
+                                สิ่งที่โดดเด่นที่อยู่ภายในวัดป่าประดู่แห่งนี้<br />คือ "พระพุทธรูปนอนตะแคงซ้าย" ที่เก่าแก่<br />เป็นพระพุทธไสยาสน์ที่แปลกที่สุดในประเทศไทย
+                                <br /><br />
+                                <a href="https://goo.gl/maps/Nu6dmY2iA7P2" style="color:crimson; text-decoration: none;">พิกัด : ต.ท่าประดู่ อ.เมืองระยอง จ.ระยอง</a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!--3-->
+                    <div class="card">
+                        <a href="https://maps.app.goo.gl/dafrWuVqT9wXKhbv9" style="color:crimson; text-decoration: none;">
+                            <img src="ศาลหลักเมืองงระยอง.jpg" />
+                        </a>
+                        <div class="card-content">
+                            <h3>ศาลหลักเมืองระยอง</h3>
+                            <p>
+                                ก่อตั้งในรัชสมัยของ ร.4 แต่ในปี พ.ศ. 2486 <br />เสาหลักเมืองได้พังลง ชาวบ้านจึงได้ร่วมมือกัน<br />บูรณะให้มีความมั่นคงแข็งแรงในปี พ.ศ. 2534
+                                <br /><br />
+                                <a href="https://maps.app.goo.gl/dafrWuVqT9wXKhbv9" style="color:crimson; text-decoration: none;">พิกัด : ต.ท่าประดู่ อ.เมืองระยอง จ.ระยอง</a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!--4-->
+                    <div class="card">
+                        <a href="https://maps.app.goo.gl/xJZL2cM8Bg4ZtNWo8" style="color:crimson; text-decoration: none;">
+                             <img src="วัดบ้านค่าย.jpg" />
+                        </a>
+                        <div class="card-content">
+                            <h3>วัดบ้านค่าย</h3>
+                            <p>
+                                วัดบ้านค่าย เดิมมีชื่อว่า "วัดชัยชมพูพล" <br />เนื่องจากวัดบ้านค่ายเคยเป็นป้อมปราการพ่าย<br />พลช้าง ม้าศึกของพระเจ้าตากสินมหาราช
+                                <br /><br />
+                                <a href="https://maps.app.goo.gl/xJZL2cM8Bg4ZtNWo8" style="color:crimson; text-decoration: none;">พิกัด : ต.บ้านค่าย อ.บ้านค่าย จ.ระยอง</a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!--5-->
+                    <div class="card">
+                        <a href="https://maps.app.goo.gl/Mj33pcVEF2L5P43Q7" style="color:crimson; text-decoration: none;">
+                            <img src="แพชชั่น.png" />
+                        </a>
+                        <div class="card-content">
+                            <h3>แหลมทองระยอง</h3>
+                            <p>
+                                ศูนย์การค้า Passione หรือชื่อเก่าคือ แหลมทอง <br />ห้างที่ตอบโจทย์ไลฟ์สไตล์ชีวิตคนเมืองยอง<br />ช็อป ชิม ชิว แฟชั่น และความบันเทิง
+                                <br /><br />
+                                <a href="https://maps.app.goo.gl/Mj33pcVEF2L5P43Q7" style="color:crimson; text-decoration: none;">พิกัด : ต.เนินพระ อ.เมืองระยอง จ.ระยอง</a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!--6-->
+                    <div class="card">
+                        <a href="https://maps.app.goo.gl/X3gnwfogJzvmCgJw7" style="color:crimson; text-decoration: none;">
+                            <img src="เซ็นทรัล.jpg" />
+                        </a>
+                        <div class="card-content">
+                            <h3>เซ็นทรัลระยอง</h3>
+                            <p>
+                                เซ็นทรัล ระยอง ศูนย์การค้าที่อยู่ติดถนนสาย 36 <br />เป็นศูนย์การค้าที่ใหญ่และทันสมัยที่สุดในระยอง
+                                <br /><br />
+                                <a href="https://maps.app.goo.gl/X3gnwfogJzvmCgJw7" style="color:crimson; text-decoration: none;">พิกัด : ต.เชิงเนิน อ.เมืองระยอง จ.ระยอง</a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!--7-->
+                    <div class="card">
+                        <a href="https://maps.app.goo.gl/hg5cgYAYLBmYbBbr7" style="color:crimson; text-decoration: none;">
+                            <img src="ตลาดน้ำเกาะกลอย.jpg" />
+                        </a>
+                        <div class="card-content">
+                            <h3>ตลาดน้ำเกาะกลอย</h3>
+                            <p>
+                                แหล่งรวมร้านค้าและของเก่าแก่ <br />มีพื้นที่รับประทานอาหาร ร้านขายของที่ระลึก<br />และจุดให้อาหารปลา
+                                <br /><br />
+                                <a href="https://maps.app.goo.gl/hg5cgYAYLBmYbBbr7" style="color:crimson; text-decoration: none;">พิกัด : ต.เชิงเนิน อ.เมืองระยอง จ.ระยอง</a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!--8-->
+                    <div class="card">
+                        <a href="https://maps.app.goo.gl/ydUt2JMLx5zCeart5" style="color:crimson; text-decoration: none;">
+                            <img src="วัดห้วงหิน.jpg" />
+                        </a>
+                        <div class="card-content">
+                            <h3>วัดห้วงหิน</h3>
+                            <p>
+                                สถานที่เก็บรวบรวมและจัดแสดงโบราณวัตถุ<br />และศิลปวัตถุอันมีค่า ตั้งแต่สมัยก่อนประวัติศาสตร์ <br />จนถึงปัจจุบัน
+                                <br /><br />
+                                <a href="https://maps.app.goo.gl/ydUt2JMLx5zCeart5" style="color:crimson; text-decoration: none;">พิกัด : ต.ชากบก อ.บ้านค่าย จ.ระยอง</a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!--9-->
+                    <div class="card">
+                        <a href="https://maps.app.goo.gl/kWnWo5R4bZ92kHcU8" style="color:crimson; text-decoration: none;">
+                            <img src="หาดแม่รำพึงง.jpg" />
+                        </a>
+                        <div class="card-content">
+                            <h3>หาดแม่รำพึง</h3>
+                            <p>
+                                หาดแม่รำพึง มีความยาวหาดทั้งหมด <br />12 กิโลเมตร น้ำทะเลสีคราม สดใส มองเห็นทราย<br />มีจุดชมวิวที่น่าสนใจ คือ ลานหินขาว
+                                <br /><br />
+                                <a href="https://maps.app.goo.gl/kWnWo5R4bZ92kHcU8" style="color:crimson; text-decoration: none;">พิกัด : ต.ตะพง อ.เมืองระยอง จ.ระยอง</a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!--10-->
+                    <div class="card">
+                        <a href="https://maps.app.goo.gl/DWv3WRknj5nbFgiRA" style="color:crimson; text-decoration: none;">
+                            <img src="แหลมเจริญ.jpg" />
+                        </a>
+                        <div class="card-content">
+                            <h3>หาดแหลมเจริญ</h3>
+                            <p>
+                                หาดแหลมเจริญ หาดทรายขาวและมีพื้นที่<br />ของชายหาดที่กว้าง จุดเด่น คือ บริเวณชายหาด<br />เต็มไปด้วยคาเฟ่ในรถ Food Truck
+                                <br /><br />
+                                <a href="https://maps.app.goo.gl/DWv3WRknj5nbFgiRA" style="color:crimson; text-decoration: none;">พิกัด : ต.ท่าประดู่ อ.เมืองระยอง จ.ระยอง</a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!--11-->
+                    <div class="card">
+                        <a href="https://maps.app.goo.gl/aBAkisMsBEg5ZGMf9" style="color:crimson; text-decoration: none;">
+                            <img src="สวนสน.jpg" />
+                        </a>
+                        <div class="card-content">
+                            <h3>สวนสน</h3>
+                            <p>
+                                หาดสวนสน เป็นแหล่งท่องเที่ยว<br />ที่เหมาะกับการไปพักผ่อนเป็นครอบครัว<br />เพราะเงียบสงบและร่มรื่นด้วยต้นสนตลอดทาง
+                                <br /><br />
+                                <a href="https://maps.app.goo.gl/aBAkisMsBEg5ZGMf9" style="color:crimson; text-decoration: none;">พิกัด : ต.แกลง อ.เมืองระยอง จ.ระยอง</a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!--12-->
+                    <div class="card">
+                        <a href="https://maps.app.goo.gl/kpBEMHZ8w3yb3TxYA" style="color:crimson; text-decoration: none;">
+                            <img src="ปางช้างระยอง.jpg" />
+                        </a>
+                        <div class="card-content">
+                            <h3>ปางช้างระยอง</h3>
+                            <p>
+                                เป็นแลนด์มาร์กแห่งใหม่ในจังหวัดระยอง<br />มีมุมให้ถ่ายรูปมากมาย เช่น รูปปั้นหุ่นฟางคิงคอง<br />ที่สูงที่สุดในประเทศไทย
+                                <br /><br />
+                                <a href="https://maps.app.goo.gl/kpBEMHZ8w3yb3TxYA" style="color:crimson; text-decoration: none;">พิกัด : ต.ตะพง อ.เมืองระยอง จ.ระยอง</a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!--13-->
+                    <div class="card">
+                        <a href="https://maps.app.goo.gl/6d7X6PKSTMDzhFMM7" style="color:crimson; text-decoration: none;">
+                            <img src="ตำนานป่า.jpg" />
+                        </a>
+                        <div class="card-content">
+                            <h3>ตำนานป่ารีสอร์ท</h3>
+                            <p>
+                                ตำนานป่า เป็นร้านอาหาร สวนน้ำ และรีสอร์ท<br />มีเนื้อที่กว่า 150 ไร่ ประจำเมืองระยอง<br />มีบรรยากาศที่ร่มรื่นและสวยงามมาก ๆ
+                                <br /><br />
+                                <a href="https://maps.app.goo.gl/6d7X6PKSTMDzhFMM7" style="color:crimson; text-decoration: none;">พิกัด : ต.เพ อ.เมืองระยอง จ.ระยอง</a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!--14-->
+                    <div class="card">
+                        <a href="https://maps.app.goo.gl/M9ePt9EqTGHpr9617" style="color:crimson; text-decoration: none;">
+                            <img src="ตลาดร้อยเสา.jpg" />
+                        </a>
+                        <div class="card-content">
+                            <h3>ตลาดร้อยเสา</h3>
+                            <p>
+                                เป็นตลาดที่ขายของฝากที่ขึ้นชื่อของจังหวัดระยอง<br />และเป็นตลาดที่มีขนาดใหญ่ มีเสาถึง 100 ต้น<br />ในตลาดแห่งนี้
+                                <br /><br />
+                                <a href="https://maps.app.goo.gl/M9ePt9EqTGHpr9617" style="color:crimson; text-decoration: none;">พิกัด : ต.เพ อ.เมืองระยอง จ.ระยอง</a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!--15-->
+                    <div class="card">
+                        <a href="https://maps.app.goo.gl/Zz3wWwHXVAaxYkSJA" style="color:crimson; text-decoration: none;">
+                            <img src="ชุมแสง.jpg" />
+                        </a>
+                        <div class="card-content">
+                            <h3>ตลาดชุมแสง</h3>
+                            <p>
+                                ตลาดสดชุมแสง มีของซื้อของขายมากมาย<br />อีกทั้งยังมีอาหารให้เลือกแวะซื้อแวะชิม
+                                <br /><br />
+                                <a href="https://maps.app.goo.gl/Zz3wWwHXVAaxYkSJA" style="color:crimson; text-decoration: none;">พิกัด : ต.ชุมแสง อ.วังจันทร์ จ.ระยอง</a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!--16-->
+                    <div class="card">
+                        <a href="https://maps.app.goo.gl/NeLDuKv5pfEiKxyb8" style="color:crimson; text-decoration: none;">
+                            <img src="สุภัทราแลนด์.jpg" />
+                        </a>
+                        <div class="card-content">
+                            <h3>สวนสุภัทราแลนด์</h3>
+                            <p>
+                                สถานที่ท่องเที่ยวที่มีรถรางลัดเลาะ<br />ผ่านสวนผลไม้ที่มีผลไม้เมืองร้อนมากมาย<br />ให้นักท่องเที่ยวได้ลิ้มลอง
+                                <br /><br />
+                                <a href="https://maps.app.goo.gl/NeLDuKv5pfEiKxyb8" style="color:crimson; text-decoration: none;">พิกัด : ต.หนองละลอก อ.บ้านค่าย จ.ระยอง</a>
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </body1>
+            <div class="button">
+                <a href="สถานที่รอบเส้นทาง.html">
+                    <button>ดูสถานที่รอบเส้นทาง</button>
+
+                    <a href="คำนวณค่าโดยสาร.html">
+                        <button>คำนวณค่าโดยสาร</button>
+            </div>
+        </center>
+    </div>
+
+    <script src="script1.js"></script>
+
+
+</body>
+</html>

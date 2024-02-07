@@ -1,0 +1,265 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <title>แผนที่เส้นทางการเดินรถ</title>
+    <style>
+        body {
+            margin: 0;
+            font-size: 35px;
+            font-family: Kanit;
+            color: #4b0082;
+            background-image: url('bg1.jpg');
+            background-repeat: no-repeat;
+        }
+
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 40px 100px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: 0.6s;
+            z-index: 100000;
+            font-family: Kanit;
+            background-color: indigo;
+            overflow: hidden;
+        }
+
+        .logo {
+            position: relative;
+            font-size: 1.7em;
+            cursor: default;
+            color: whitesmoke;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: 0.6s;
+            display: inline-block;
+        }
+
+        #navbar {
+            height: 75px;
+            overflow: hidden;
+            background-color: indigo;
+        }
+
+            #navbar a {
+                float: right;
+                height: 75px;
+                display: block;
+                color: #f2f2f2;
+                text-align: center;
+                padding: 18px 16px;
+                text-decoration: none;
+                font-size: 20px;
+            }
+
+                #navbar a:hover {
+                    background-color: #ddd;
+                    color: black;
+                }
+
+        .content {
+            padding: 75px;
+        }
+
+        .sticky {
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }
+
+            .sticky + .content {
+                padding-top: 60px;
+            }
+
+        main {
+            display: grid;
+            grid-template-columns: repeat(5,1fr);
+            grid-template-rows: repeat(3,1fr);
+            position: center;
+            font-family: Kanit;
+            background-color :whitesmoke;
+        }
+
+            main div {
+                padding: 10px;
+                padding-top: 30px;
+                position: center;
+            }
+
+            main img {
+                width: 20%;
+                position: center;
+            }
+
+        .name {
+            font-size: 18px;
+            font-weight: 500;
+            color: black;
+            text-align: center;
+        }
+
+        .descripion {
+            font-size: 14px;
+            color: azure;
+            text-align: center;
+        }
+
+        button {
+            background-color: indigo;
+            border: 2px solid whitesmoke;
+            border-radius: 40px;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-family: Kanit;
+            font-size: medium;
+            font-weight: 600;
+            margin: 50px;
+            padding: 10px 50px;
+            transition-duration: 0.4s;
+            cursor: pointer;
+        }
+
+            button:hover {
+                background: #808080;
+                color: black;
+            }
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div id="navbar">
+            <a href="ข้อมูลติดต่อ.html"><href ="javascript:void(0)">ข้อมูลติดต่อ</a>
+            <a href="สถานที่รอบเส้นทาง.html"><href ="javascript:void(0)">สถานที่รอบเส้นทาง</a>
+            <a href="แผนที่เส้นทางการเดินรถ.html"><href ="javascript:void(0)">แผนที่เส้นทางการเดินรถ</a>
+            <a href="หน้าแรก.html"><href ="javascript:void(0)">หน้าแรก</a>
+
+            <div class="logo">
+                <a href="หน้าแรก.html" style="text-decoration: none; color: whitesmoke; background: none;"><img src="logo6.png" alt=""></a>
+            </div>
+        </div>
+    </header>
+    <div class="content">
+        <center>
+            <h3> แผนที่เส้นทางการเดินรถ</h3>
+            <main>
+                <div>
+                    <a href="แผนที่อัสสัมชัญ.html"> <img src="รถอัสสัมชัญ.png" alt=""> </a>
+                    <h2 class="name"> อัสสัมชัญ</h2>
+                </div>
+
+                <div>
+                    <a href="แผนที่บ้านฉาง.html"> <img src="รถบ้านฉาง.png" alt=""> </a>
+                    <h2 class="name"> บ้านฉาง</h2>
+                </div>
+
+                <div>
+                    <a href="แผนที่มาบตาพุด.html"> <img src="รถมาบตาพุด.png" alt=""> </a>
+                    <h2 class="name"> มาบตาพุด</h2>
+                </div>
+
+                <div>
+                    <a href="แผนที่นิคมพัฒนา.html"> <img src="รถนิคม.png" alt=""> </a>
+                    <h2 class="name"> นิคมพัฒนา</h2>
+                </div>
+
+                <div>
+                    <a href="แผนที่หาดแม่รำพึง.html"> <img src="รถหาดแม่รำพึง.png" alt=""> </a>
+                    <h2 class="name"> หาดแม่รำพึง</h2>
+                </div>
+
+                <div>
+                    <a href="แผนที่บ้านค่าย.html"> <img src="รถบ้านค่าย.png" alt=""> </a>
+                    <h2 class="name"> บ้านค่าย</h2>
+                </div>
+
+                <div>
+                    <a href="แผนที่เจ็ดลูกเนิน.html"> <img src="รถเจ็ดลูกเนิน.png" alt=""> </a>
+                    <h2 class="name"> เจ็ดลูกเนิน</h2>
+                </div>
+
+                <div>
+                    <a href="แผนที่หนองผักหนาม.html"> <img src="รถหนองผักหนาม.png" alt=""> </a>
+                    <h2 class="name"> หนองผักหนาม</h2>
+                </div>
+
+                <div>
+                    <a href="แผนที่ปากน้ำ.html"> <img src="รถปากน้ำ.png" alt=""> </a>
+                    <h2 class="name"> ปากน้ำ</h2>
+                </div>
+
+                <div>
+                    <a href="แผนที่บ้านเพ.html"> <img src="รถบ้านเพ.png" alt=""> </a>
+                    <h2 class="name"> บ้านเพ</h2>
+                </div>
+
+                <div>
+                    <a href="แผนที่สามย่าน.html"> <img src="รถสามย่าน.png" alt=""> </a>
+                    <h2 class="name"> สามย่าน</h2>
+                </div>
+
+                <div>
+                    <a href="แผนที่วังจันทร์.html"> <img src="รถวังจันทร์.png" alt=""> </a>
+                    <h2 class="name"> วังจันทร์</h2>
+                </div>
+
+                <div>
+                    <a href="แผนที่บ้านแลง.html"> <img src="รถบ้านแลง.png" alt=""> </a>
+                    <h2 class="name"> บ้านแลง</h2>
+                </div>
+
+                <div>
+                    <a href="แผนที่กรอกยายชา.html"> <img src="รถกรอกยายชา.png" alt=""> </a>
+                    <h2 class="name"> กรอกยายชา</h2>
+                </div>
+
+                <div>
+                    <a href="แผนที่บ้านตาสิทธิ์.html"> <img src="รถบ้านตาสิทธิ์.png" alt=""> </a>
+                    <h2 class="name"> บ้านตาสิทธิ์</h2>
+                </div>
+
+
+            </main>
+            <!--link page end-->
+
+            <div class="button">
+                <a href="สถานที่รอบเส้นทาง.html">
+                    <button> ดูสถานที่รอบเส้นทาง</button>
+
+                    <a href="คำนวณค่าโดยสาร.html">
+                        <button> คำนวณค่าโดยสาร</button>
+            </div>
+        </center>
+
+        <script>
+            window.onscroll = function () { myFunction() };
+
+            var navbar = document.getElementById("navbar");
+            var sticky = navbar.offsetTop;
+
+            function myFunction() {
+                if (window.pageYOffset >= sticky) {
+                    navbar.classList.add("sticky")
+                } else {
+                    navbar.classList.remove("sticky");
+                }
+            }
+        </script>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+﻿﻿* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Kanit;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(4,1fr);
+    position: center;
+    font-family: Kanit;
+    background-color: whitesmoke;
+}
+
+.card {
+    width: 250px;
+    height: 350px;
+    background-color: #ffd800;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 2px 4px rgba(0,0,0,0.2);
+    margin: 18px;
+}
+
+    .card img {
+        width: 250px;
+        height: 200px;
+    }
+
+.card-content {
+    margin: -18px;
+}
+
+    .card-content h3 {
+        text-align: center;
+        font-size: 20px;
+        margin-bottom: 2px;
+        color:black;
+    }
+
+    .card-content p {
+        text-align: center;
+        color: black;
+        font-size: 12px;
+        line-height: 1.3;
+    }

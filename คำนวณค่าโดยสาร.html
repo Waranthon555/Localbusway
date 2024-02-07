@@ -1,0 +1,459 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <title>คำนวณค่าโดยสาร</title>
+    
+    <style>
+        body {
+            margin: 0;
+            font-size: 35px;
+            font-family: Kanit;
+            color: indigo;
+            align-items: center;
+            background-image: url('bg1.jpg');
+            background-repeat: no-repeat;
+        }
+
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 40px 100px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: 0.6s;
+            z-index: 100000;
+            font-family: Kanit;
+            background-color: indigo;
+            overflow: hidden;
+        }
+
+        .logo {
+            position: relative;
+            font-size: 1.7em;
+            cursor: default;
+            color: whitesmoke;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: 0.6s;
+            display: inline-block;
+        }
+
+        #navbar {
+            height: 75px;
+            overflow: hidden;
+            background-color: indigo;
+        }
+
+            #navbar a {
+                float: right;
+                height: 75px;
+                display: block;
+                color: #f2f2f2;
+                text-align: center;
+                padding: 18px 16px;
+                text-decoration: none;
+                font-size: 20px;
+            }
+
+                #navbar a:hover {
+                    background-color: #ddd;
+                    color: black;
+                }
+
+        .content {
+            padding: 75px;
+        }
+
+        .sticky {
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }
+
+            .sticky + .content {
+                padding-top: 60px;
+            }
+
+        button {
+            background-color: indigo;
+            border: 2px solid whitesmoke;
+            border-radius: 40px;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-family: Kanit;
+            font-size: medium;
+            font-weight: 600;
+            margin: 50px;
+            padding: 10px 50px;
+            transition-duration: 0.4s;
+            cursor: pointer;
+        }
+
+            button:hover {
+                background: #808080;
+                color: black;
+            }
+        button1 {
+            background-color: #000c4f;
+            border: 2px solid whitesmoke;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-family: Kanit;
+            font-size: medium;
+            font-weight: 600;
+            margin: 10px;
+            padding: 10px 50px;
+            transition-duration: 0.4s;
+            cursor: pointer;
+        }
+        button1:hover {
+            background: #808080;
+            color: black;
+        }
+        button2 {
+            background-color: #9d8500;
+            border: 2px solid whitesmoke;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-family: Kanit;
+            font-size: medium;
+            font-weight: 600;
+            margin: 10px;
+            padding: 10px 50px;
+            transition-duration: 0.4s;
+            cursor: pointer;
+        }
+
+            button2:hover {
+                background: #808080;
+                color: black;
+            }
+        select {
+            font-family: Kanit;
+            border: 2px solid #000000;
+            border-radius: 40px;
+            font-size: 20px;
+            width: 30%;
+            height: 45px;
+            margin: 20px;
+            background-color: whitesmoke;
+            color: black;
+            padding: 5px 15px 5px 15px;
+            border: none;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+            -webkit-appearance: button;
+            appearance: button;
+            outline: none;
+        }
+        span {
+            font-family: Kanit;
+            font-size: 30px;
+            font-weight:600;
+            color:black;
+        }
+        span1 {
+            font-family: Kanit;
+            font-size: 30px;
+            font-weight: 550;
+            color: red;
+        }
+        label {
+            font-family: Kanit;
+            font-size: 10px;
+            font-weight: 300;
+            color: darkred;
+        }
+        table {
+            position:center;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            position: center;
+            border: 2px solid black;
+            padding: 8px;
+            text-align: center;
+        }
+
+        th {
+            font-family: Kanit;
+            font-size: 25px;
+            font-weight: 500;
+            color: whitesmoke;
+            position: center;
+            background-color: indigo;
+        }
+
+        h2 {
+            display: block;
+            font-size: 1.5em;
+            margin-block-start: 0.83em;
+            margin-block-end: 0.83em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+            font-weight: bold;
+            font-family: Kanit;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div id="navbar">
+            <a href="ข้อมูลติดต่อ.html"><href ="javascript:void(0)">ข้อมูลติดต่อ</a>
+            <a href="สถานที่รอบเส้นทาง.html"><href ="javascript:void(0)">สถานที่รอบเส้นทาง</a>
+            <a href="แผนที่เส้นทางการเดินรถ.html"><href ="javascript:void(0)">แผนที่เส้นทางการเดินรถ</a>
+            <a href="หน้าแรก.html"><href ="javascript:void(0)">หน้าแรก</a>
+
+            <div class="logo">
+                <a href="หน้าแรก.html" style="text-decoration: none; color: whitesmoke; background: none;"><img src="logo6.png" alt=""></a>
+            </div>
+        </div>
+    </header>
+   
+        <div class="content">
+            <center>
+                <h3>คำนวณค่าโดยสาร</h3>
+                <div class="form-group">
+                    <form id="fareForm">
+
+                        <span>ต้นทาง</span>
+
+                        <select id="origin" name="origin">
+                            <option value="โปรดเลือก">โปรดเลือก...</option>
+                                <option value="บขส.เก่าระยอง">บขส.เก่าระยอง</option>
+                            </optgroup>
+                        </select>
+
+                        <span>ปลายทาง</span>
+                        <select id="destination" name="destination">
+                            <option value="โปรดเลือก">โปรดเลือก...</option>
+                            <optgroup label="อัสสัมชัญ" style="color: black; font-weight:500;">
+                                <option value="ตลาดหมอสาโรจน์ (อัสสัมชัญ)">ตลาดหมอสาโรจน์</option>
+                                <option value="แหลมทองระยอง (อัสสัมชัญ)">แหลมทองระยอง</option>
+                                <option value="นครชัยแอร์ (อัสสัมชัญ)">นครชัยแอร์</option>
+                                <option value="โฮมโปร (อัสสัมชัญ)">โฮมโปร</option>
+                                <option value="แยกพีเอ็มวาย (อัสสัมชัญ)">แยกพีเอ็มวาย</option>
+                                <option value="สนามกีฬากลางจังหวัดระยอง (อัสสัมชัญ)">สนามกีฬากลางจังหวัดระยอง</option>
+                                <option value="โรงเรียนเซนโยเซฟระยอง (อัสสัมชัญ)">โรงเรียนเซนโยเซฟระยอง</option>
+                                <option value="โรงเรียนอัสสัมชัญระยอง (อัสสัมชัญ)">โรงเรียนอัสสัมชัญระยอง</option>
+                                <option value="อบจ.ระยอง (อัสสัมชัญ)">อบจ.ระยอง</option>
+                                <option value="สำนักงานประกันสังคม (อัสสัมชัญ)">สำนักงานประกันสังคม</option>
+                                <option value="การไฟฟ้า (อัสสัมชัญ)">การไฟฟ้า</option>
+                                <option value="สำนักงานอัยการจังหวัดระยอง (อัสสัมชัญ)">สำนักงานอัยการจังหวัดระยอง</option>
+                            </optgroup>
+
+                            <optgroup label="มาบตาพุด" style="color: black; font-weight:500;">
+                                <option value="แหลมทองระยอง (มาบตาพุด)">แหลมทองระยอง</option>
+                                <option value="โฮมโปร (มาบตาพุด)">โฮมโปร</option>
+                                <option value="แยกพีเอ็มวาย (มาบตาพุด)">แยกพีเอ็มวาย</option>
+                                <option value="สนามกีฬากลางจังหวัดระยอง (มาบตาพุด)">สนามกีฬากลางจังหวัดระยอง</option>
+                                <option value="โรงเรียนเซนโยเซฟระยอง (มาบตาพุด)">โรงเรียนเซนโยเซฟระยอง</option>
+                                <option value="โรงเรียนอัสสัมชัญระยอง (มาบตาพุด)">โรงเรียนอัสสัมชัญระยอง</option>
+                                <option value="อบจ.ระยอง (มาบตาพุด)">อบจ.ระยอง</option>
+                                <option value="สำนักงานอัยการจังหวัดระยอง (มาบตาพุด)">สำนักงานอัยการจังหวัดระยอง</option>
+                                <option value="วงเวียนสามแยกขนส่งระยอง (มาบตาพุด)">วงเวียนสามแยกขนส่งระยอง</option>
+                                <option value="ทางลอดแยกเนินสำลี (มาบตาพุด)">ทางลอดแยกเนินสำลี</option>
+                                <option value="ศาลากลางจังหวัดระยอง (มาบตาพุด)">ศาลากลางจังหวัดระยอง</option>
+                                <option value="สะพานลอยมาบตาพุด (มาบตาพุด)">สะพานลอยมาบตาพุด</option>
+                            </optgroup>
+
+                            <optgroup label="บ้านฉาง" style="color: black; font-weight:500;">
+                                <option value="แหลมทองระยอง (บ้านฉาง)">แหลมทองระยอง</option>
+                                <option value="แยกพีเอ็มวาย (บ้านฉาง)">แยกพีเอ็มวาย</option>
+                                <option value="สนามกีฬากลางจังหวัดระยอง (บ้านฉาง)">สนามกีฬากลางจังหวัดระยอง</option>
+                                <option value="อบจ.ระยอง (บ้านฉาง)">อบจ.ระยอง</option>
+                                <option value="สำนักงานอัยการจังหวัดระยอง (บ้านฉาง)">สำนักงานอัยการจังหวัดระยอง</option>
+                                <option value="วงเวียนสามแยกขนส่งระยอง (บ้านฉาง)">วงเวียนสามแยกขนส่งระยอง</option>
+                                <option value="ทางลอดแยกเนินสำลี (บ้านฉาง)">ทางลอดแยกเนินสำลี</option>
+                                <option value="ตลาดนัดเมืองใหม่มาบตาพุด (บ้านฉาง)">ตลาดนัดเมืองใหม่มาบตาพุด</option>
+                                <option value="โรงแยกก๊าซธรรมชาติระยอง(บ้านฉาง)">โรงแยกก๊าซธรรมชาติระยอง</option>
+                                <option value="วิทยาลัยเทคนิคนิคมอุตสาหกรรมระยอง (บ้านฉาง)">วิทยาลัยเทคนิคนิคมอุตสาหกรรมระยอง</option>
+                                <option value="วัดเนินกระปรอก (บ้านฉาง)">วัดเนินกระปรอก</option>
+                                <option value="โลตัสบ้านฉาง (บ้านฉาง)">โลตัสบ้านฉาง</option>
+                            </optgroup>
+
+                                <optgroup label="นิคมพัฒนา" style="color: black; font-weight:500;">
+                                    <option value="โรงพยาบาลจุฬารัตน์ระยอง (นิคมพัฒนา)">โรงพยาบาลจุฬารัตน์ระยอง</option>
+                                    <option value="เซ็นทรัลระยอง (นิคมพัฒนา)">เซ็นทรัลระยอง</option>
+                                    <option value="ตลาดน้ำเกาะกลอย (นิคมพัฒนา)">ตลาดน้ำเกาะกลอย</option>
+                                    <option value="แม็คโครระยอง (นิคมพัฒนา)">แม็คโครระยอง</option>
+                                    <option value="แยกทับมา (นิคมพัฒนา)">แยกทับมา</option>
+                                    <option value="สี่แยกมาบข่า (นิคมพัฒนา)">สี่แยกมาบข่า</option>
+                                    <option value="องค์การบรหารส่วนตำบลนิคมพัฒนา (นิคมพัฒนา)">องค์การบรหารส่วนตำบลนิคมพัฒนา</option>
+                                    <option value="ตลาดนัดนิคมซอย 13 (นิคมพัฒนา)">ตลาดนัดนิคมซอย 13</option>
+                                    <option value="นิคมซอย 13 (นิคมพัฒนา)">นิคมซอย 13</option>
+                                </optgroup>
+
+                                <optgroup label="หาดแม่รำพึง" style="color: black; font-weight:500;">
+                                    <option value="สองพี่น้อง (หาดแม่รำพึง)">สองพี่น้อง</option>
+                                    <option value="เคมี อ.อุ๊ (หาดแม่รำพึง)">เคมี อ.อุ๊</option>
+                                    <option value="ตลาดหนองจอก (หาดแม่รำพึง)">ตลาดหนองจอก</option>
+                                    <option value="วิทยาลัย IRPC (หาดแม่รำพึง)">วิทยาลัย IRPC</option>
+                                    <option value="พัน ร.7 (หาดแม่รำพึง)">พัน ร.7</option>
+                                    <option value="ตลาดตะพง (หาดแม่รำพึง)">ตลาดตะพง</option>
+                                    <option value="โรงแรมระยองบีช (หาดแม่รำพึง)">ระยองบีช</option>
+                                    <option value="ลานหินขาว (หาดแม่รำพึง)">ลานหินขาว</option>
+                                    <option value="หาดแม่รำพึง (หาดแม่รำพึง)">หาดแม่รำพึง</option>
+                                </optgroup>
+
+                                <optgroup label="บ้านค่าย" style="color: black; font-weight:500;">
+                                    <option value="เกาะกลอย (บ้านค่าย)">เกาะกลอย</option>
+                                    <option value="น้ำคอก (บ้านค่าย)">น้ำคอก</option>
+                                    <option value="ศุภาลัย (บ้านค่าย)">ศุภาลัย</option>
+                                    <option value="บ้านเก่า (บ้านค่าย)">บ้านเก่า</option>
+                                    <option value="โรงเรียนนานาชาติสิงคโปร์ (บ้านค่าย)">โรงเรียนนานาชาติสิงคโปร์</option>
+                                    <option value="ศาลามังคุด (บ้านค่าย)">ศาลามังคุด</option>
+                                    <option value="โรงเรียนบ้านค่าย (บ้านค่าย)">โรงเรียนบ้านค่าย</option>
+                                    <option value="โรงพยาบาลบ้านค่าย (บ้านค่าย)">โรงพยาบาลบ้านค่าย</option>
+                                    <option value="ตลาดไผ่ล้อม (บ้านค่าย)">ตลาดไผ่ล้อม</option>
+                                </optgroup>
+
+                                <optgroup label="เจ็ดลูกเนิน" style="color: black; font-weight:500;">
+                                    <option value="โรงพยาบาลจุฬารัตน์ระยอง (เจ็ดลูกเนิน)">โรงพยาบาลจุุฬารัตน์ระยอง</option>
+                                    <option value="แยกเกาะกลอย (เจ็ดลูกเนิน)">แยกเกาะกลอย</option>
+                                    <option value="ครัวแกงเผ็ด (เจ็ดลูกเนิน)">ครัวแกงเผ็ด</option>
+                                    <option value="โรงพยาบาลศรีระยอง (เจ็ดลูกเนิน)">โรงพยาบาลศรีระยอง</option>
+                                    <option value="เทศบาลตำบลเชิงเนิน (เจ็ดลูกเนิน)">เทศบาลตำบลเชิงเนิน</option>
+                                    <option value="สี่แยกบ้านดอน (เจ็ดลูกเนิน)">สี่แยกบ้านดอน</option>
+                                    <option value="สี่แยกวัดตาขัน (เจ็ดลูกเนิน)">สี่แยกวัดตาขัน</option>
+                                    <option value="รพ.สต.บ้านหนองตะแบก (เจ็ดลูกเนิน)">รพ.สต.บ้านหนองตะแบก</option>
+                                    <option value="สี่แยกชากกอไผ่ (เจ็ดลูกเนิน)">สี่แยกชากกอไผ่</option>
+                                    <option value="วัดห้วงหิน (เจ็ดลูกเนิน)">วัดห้วงหิน</option>
+                                    <option value="วัดเจ็ดลูกเนิน (เจ็ดลูกเนิน)">วัดเจ็ดลูกเนิน</option>
+                                    <option value="ที่พักสายตรวจบ้านเจ็ดลูกเนิน (เจ็ดลูกเนิน)">ที่พักสายตรวจบ้านเจ็ดลูกเนิน</option>
+                                </optgroup>
+
+                                <optgroup label="หนองผักหนาม" style="color: black; font-weight:500;">
+                                    <option value="โรงพยาบาลจุฬารัตน์ระยอง (หนองผักหนาม)">โรงพยาบาลจุุฬารัตน์ระยอง</option>
+                                    <option value="ถนนชายกระป่อม (หนองผักหนาม)">ถนนชายกระป่อม</option>
+                                    <option value="เซ็นทรัลระยอง (หนองผักหนาม)">เซ็นทรัลระยอง</option>
+                                    <option value="แม็คโครระยอง (หนองผักหนาม)">แม็คโครระยอง</option>
+                                    <option value="สี่แยกทับมา (หนองผักหนาม)">สี่แยกทับมา</option>
+                                    <option value="วัดเขาโบสถ์ (หนองผักหนาม)">วัดเขาโบสถ์</option>
+                                    <option value="วัดกระเฉท (หนองผักหนาม)">วัดกระเฉท</option>
+                                    <option value="วัดหนองผักหนาม (หนองผักหนาม)">วัดหนองผักหนาม</option>
+                                    <option value="วัดมาบข่า (หนองผักหนาม)">วัดมาบข่า</option>
+                                </optgroup>
+
+                                <optgroup label="ปากน้ำ" style="color: black; font-weight:500;">
+                                    <option value="โรงพยาบาลระยอง (ปากน้ำ)">โรงพยาบาลระยอง</option>
+                                    <option value="หอนาฬิกา (ปากน้ำ)">หอนาฬิกา</option>
+                                    <option value="วัดลุ่ม (ปากน้ำ)">วัดลุ่ม</option>
+                                    <option value="สถานีตำรวจภูธรระยอง (ปากน้ำ)">สถานีตำรวจภูธรระยอง</option>
+                                    <option value="เทศบาลนครระยอง (ปากน้ำ)">เทศบาลนครระยอง</option>
+                                    <option value="ที่ว่าการอำเภอเมืองระยอง (ปากน้ำ)">ที่ว่าการอำเภอเมืองระยอง</option>
+                                    <option value="โรงเรียนระยองวิทยาคม (ปากน้ำ)">โรงเรียนระยองวิทยาคม</option>
+                                    <option value="วิทลัยเทคนิคระยอง (ปากน้ำ)">วิทลัยเทคนิคระยอง</option>
+                                    <option value="ถนนสัมฤทธิ์ (ปากน้ำ)">ถนนสัมฤทธิ์</option>
+                                    <option value="โรงเรียนระยองวิทย์ปากน้ำ (ปากน้ำ)">โรงเรียนระยองวิทย์ปากน้ำ</option>
+                                    <option value="วัดปากน้ำสมุทรคงคราม (ปากน้ำ)">วัดปากน้ำสมุทรคงคราม</option>
+                                    <option value="ถนนเลียบชายฝั่ง (ปากน้ำ)">ถนนเลียบชายฝั่ง</option>
+                                    <option value="หาดแหลมเจริญ (ปากน้ำ)">หาดแหลมเจริญ</option>
+                                </optgroup>
+
+                                <optgroup label="บ้านเพ" style="color: black; font-weight:500;">
+                                    <option value="โรงพยาบาลระยอง (บ้านเพ)">โรงพยาบาลระยอง</option>
+                                    <option value="IRPC (บ้านเพ)">IRPC</option>
+                                    <option value="ตลาดผลไม้ตะพง (บ้านเพ)">ตลาดผลไม้ตะพง</option>
+                                    <option value="ตำนานป่า (บ้านเพ)">ตำนานป่า</option>
+                                    <option value="สวนพฤษชาติโสภณ (บ้านเพ)">สวนพฤษชาติโสภณ</option>
+                                    <option value="ตลาดร้อยเสา (บ้านเพ)">ตลาดร้อยเสา</option>
+                                    <option value="ตลาดสดบ้านเพ (บ้านเพ)">ตลาดสดบ้านเพ</option>
+                                    <option value="ท่าเรือเพ (บ้านเพ)">ท่าเรือเพ</option>
+                                    <option value="โลตัสบ้านเพ (บ้านเพ)">โลตัสบ้านเพ</option>
+                                </optgroup>
+
+                                <optgroup label="สามย่าน" style="color: black; font-weight:500;">
+                                    <option value="วิทยาลัยอาชีวศึกษาโปลีเทคนิคระยอง (สามย่าน)">วิทยาลัยอาชีวศึกษาโปลีเทคนิคระยอง</option>
+                                    <option value="ตลาดผลไม้ตะพง (สามย่าน)">ตลาดผลไม้ตะพง</option>
+                                    <option value="วัดเขาสำเภาทอง (สามย่าน)">วัดเขาสำเภาทอง</option>
+                                    <option value="แยกกะเฉด (สามย่าน)">แยกกะเฉด</option>
+                                    <option value="โรงเรียนบ้านสองสลึง (สามย่าน)">โรงเรียนบ้านสองสลึง</option>
+                                    <option value="โรงพยาบาลสามย่าน (สามย่าน)">โรงพยาบาลสามย่าน</option>
+                                    <option value="คิวรถสองแถวสามย่าน (สามย่าน)">คิวรถสองแถวสามย่าน</option>
+                                </optgroup>
+
+                                <optgroup label="วังจันทร์" style="color: black; font-weight:500;">
+                                    <option value="แยกเกาะกลอย (วังจันทร์)">แยกเกาะกลอย</option>
+                                    <option value="วัดบ้านเก่า (วังจันทร์)">วัดบ้านเก่า</option>
+                                    <option value="วัดบ้านค่าย (วังจันทร์)">วัดบ้านค่าย</option>
+                                    <option value="สี่แยกบางบุตร (วังจันทร์)">สี่แยกบางบุตร</option>
+                                    <option value="แยกสนากีฬาบางบุตร (วังจันทร์)">แยกสนากีฬาบางบุตร</option>
+                                    <option value="บ้านห้วยยาง (วังจันทร์)">บ้านห้วยยาง</option>
+                                    <option value="วัดเนินสว่าง (วังจันทร์)">วัดเนินสว่าง</option>
+                                    <option value="วัดเขาตาอิ๋น (วังจันทร์)">วัดเขาตาอิ๋น</option>
+                                    <option value="ตลาดชุมแสง (วังจันทร์)">ตลาดชุมแสง</option>
+                                </optgroup>
+
+                                <optgroup label="บ้านแลง" style="color: black; font-weight:500;">
+                                    <option value="แยกบ้านแลง (บ้านแลง)">แยกบ้านแลง</option>
+                                    <option value="เฮาส์ซิ่ง IRPC (บ้านแลง)">เฮาส์ซิ่ง IRPC</option>
+                                    <option value="ชากใหญ่ (บ้านแลง)">ชากใหญ่</option>
+                                    <option value="วัดจุฬามุนี (บ้านแลง)">วัดจุฬามุนี</option>
+                                    <option value="บ้านแลง (บ้านแลง)">บ้านแลง</option>
+                                    <option value="ขวากลิง (บ้านแลง)">ขวากลิง - ตะเกราทอง</option>
+                                    <option value="วัดเขาพระบาท (บ้านแลง)">วัดเขาพระบาท</option>
+                                </optgroup>
+
+                                <optgroup label="กรอกยายชา" style="color: black; font-weight:500;">
+                                    <option value="วัดโขดทิมธาราม (กรอกยายชา)">วัดโขดทิมธาราม</option>
+                                    <option value="โรงแรมระยองซิตี้ (กรอกยายชา)">โรงแรมระยองซิตี้</option>
+                                    <option value="ป่าสงวนแห่งชาติป่าหนองสนม (กรอกยายชา)">ป่าสงวนแห่งชาติป่าหนองสนม</option>
+                                    <option value="ระยอง กอล์ฟไดร์ฟวิ่งเรนจ์ (กรอกยายชา)">ระยอง กอล์ฟไดร์ฟวิ่งเรนจ์</option>
+                                    <option value="ร้านวรรณระยอง สาขา 3 (กรอกยายชา)">ร้านวรรณระยอง สาขา 3</option>
+                                    <option value="โรงพยาบาลกรุงเทพระยอง (กรอกยายชา)">โรงพยาบาลกรุงเทพระยอง</option>
+                                    <option value="วัดกรอกยายชา (กรอกยายชา)">วัดกรอกยายชา</option>
+                                </optgroup>
+
+                                <optgroup label="บ้านตาสิทธิ์" style="color: black; font-weight:500;">
+                                    <option value="วัดบ้านค่าย (บ้านตาสิทธิ์)">วัดบ้านค่าย</option>
+                                    <option value="สี่แยกบางบุตร (บ้านตาสิทธิ์)">สี่แยกบางบุตร</option>
+                                    <option value="องค์การบริหารส่วนตำบลหนองบัว (บ้านตาสิทธิ์)">องค์การบริหารส่วนตำบลหนองบัว</option>
+                                    <option value="วัดหนองกรับ (บ้านตาสิทธิ์)">วัดหนองกรับ</option>
+                                    <option value="ปากแพรก (บ้านตาสิทธิ์)">ปากแพรก</option>
+                                    <option value="สวนผึ้งปลวกแดง (บ้านตาสิทธิ์)">สวนผึ้งปลวกแดง</option>
+                                    <option value="แยกเขาน้อย (บ้านตาสิทธิ์)">แยกเขาน้อย</option>
+                                </optgroup>
+
+                        </select>
+                        <br />
+                        <br />
+                        <button1 type="button" onclick="calculateFare(event)">คำนวณอัตราค่าโดยสาร</button1>
+                    </form>
+
+                </div>
+
+                <div class="button1">
+                    <a href="ตารางรถรอบแรกและรอบสุดท้าย.html">
+                        <button2>ตารางรถรอบแรก - รอบสุดท้าย</button2>
+                </div>
+
+                <div class="button">
+                    <a href="สถานที่รอบเส้นทาง.html">
+                        <button>ดูสถานที่รอบเส้นทาง</button>
+
+                        <a href="คำนวณค่าโดยสาร.html">
+                            <button>คำนวณค่าโดยสาร</button>
+
+                </div>
+            </center>
+        </div>
+        <script src="script1.js"></script>
+
+</body>
+</html>

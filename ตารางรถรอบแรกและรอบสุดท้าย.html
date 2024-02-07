@@ -1,0 +1,274 @@
+﻿<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <title>ตารางรถโดยสาร</title>
+    <link rel="stylesheet" href="StyleSheettb.css" />
+    <style>
+        body {
+            margin: 0;
+            font-size: 35px;
+            font-family: Kanit;
+            color: #4b0082;
+            align-items: center;
+            background-image: url('bg1.jpg');
+            background-repeat: no-repeat;
+        }
+
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 40px 100px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: 0.6s;
+            z-index: 100000;
+            font-family: Kanit;
+            background-color: indigo;
+            overflow: hidden;
+        }
+
+        .logo {
+            position: relative;
+            font-size: 1.7em;
+            cursor: default;
+            color: whitesmoke;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: 0.6s;
+            display: inline-block;
+        }
+
+        #navbar {
+            height: 75px;
+            overflow: hidden;
+            background-color: indigo;
+        }
+
+            #navbar a {
+                float: right;
+                height: 75px;
+                display: block;
+                color: #f2f2f2;
+                text-align: center;
+                padding: 18px 16px;
+                text-decoration: none;
+                font-size: 20px;
+            }
+
+                #navbar a:hover {
+                    background-color: #ddd;
+                    color: black;
+                }
+
+        .content {
+            padding: 16px;
+        }
+
+        .sticky {
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }
+
+            .sticky + .content {
+                padding-top: 60px;
+            }
+
+        button {
+            background-color: indigo;
+            border: 2px solid whitesmoke;
+            border-radius: 40px;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-family: Kanit;
+            font-size: medium;
+            font-weight: 600;
+            margin: 50px;
+            padding: 10px 50px;
+            transition-duration: 0.4s;
+            cursor: pointer;
+        }
+
+            button:hover {
+                background: #808080;
+                color: black;
+            }
+    </style>
+</head>
+<body>
+    <header>
+        <div id="navbar">
+            <a href="ข้อมูลติดต่อ.html"><href ="javascript:void(0)">ข้อมูลติดต่อ</a>
+            <a href="สถานที่รอบเส้นทาง.html"><href ="javascript:void(0)">สถานที่รอบเส้นทาง</a>
+            <a href="แผนที่เส้นทางการเดินรถ.html"><href ="javascript:void(0)">แผนที่เส้นทางการเดินรถ</a>
+            <a href="หน้าแรก.html"><href ="javascript:void(0)">หน้าแรก</a>
+
+            <div class="logo">
+                <a href="หน้าแรก.html" style="text-decoration: none; color: whitesmoke; background: none;"><img src="logo6.png" alt=""></a>
+            </div>
+        </div>
+    </header>
+    <center>
+        <h2 style="font-family: Kanit; font-size: 40px; margin: 100 0 20 0px;">ตารางรถโดยสารคันแรก - รถโดยสารคันสุดท้าย</h2>
+        <p style="color: crimson;font-family: Kanit; font-size:20px;">**กรุณามาก่อนเวลาล่วงหน้าอย่างน้อย 10 นาทีก่อนเวลารถออก**</p>
+        <table style="width: 90%; border: 3px solid black;">
+            <tr>
+                <td style="width: 10%; height: 70px; background-color: indigo; color: whitesmoke; border: 3px solid black;">เส้นทางรถโดยสาร</td>
+                <td style="width: 12%; height: 70px; background-color: indigo; color: whitesmoke; border: 3px solid black;">เวลาเดินรถรอบแรก</td>
+                <td style="width: 12%; height: 70px; background-color: indigo; color: whitesmoke; border: 3px solid black;">เวลาเดินรถรอบสุดท้าย</td>
+                <td style="width: 25%; height: 70px; background-color: #000f64; color: whitesmoke; border: 3px solid black;">เส้นทางรถโดยสาร</td>
+                <td style="width: 12%; height: 70px; background-color: #000f64; color: whitesmoke; border: 3px solid black;">เวลาเดินรถรอบแรก</td>
+                <td style="width: 12%; height: 70px; background-color: #000f64; color: whitesmoke; border: 3px solid black;">เวลาเดินรถรอบสุดท้าย</td>
+            </tr>
+            <tr>
+                <td style="width: 25%; height: 45px; color: indigo; background-color: whitesmoke;">ระยอง - อัสสัมชัญ</td>
+                <td style="color: indigo; background-color: whitesmoke; ">06:20 น.</td>
+                <td style="color: indigo; background-color: whitesmoke; ">18:30 น.</td>
+                <td style="width: 25%; height: 45px; color: #000f64; background-color: whitesmoke;">อัสสัมชัญ - ระยอง</td>
+                <td style="color: #000f64; background-color: whitesmoke; ">06:00 น.</td>
+                <td style="color: #000f64; background-color: whitesmoke; ">17:30 น.</td>
+            </tr>
+            <tr>
+                <td style="width: 25%; height: 45px; color: indigo; background-color: whitesmoke;">ระยอง - บ้านฉาง</td>
+                <td style="color: indigo; background-color: whitesmoke; ">06:00 น.</td>
+                <td style="color: indigo; background-color: whitesmoke; ">18:40 น.</td>
+                <td style="width: 25%; height: 45px; color: #000f64; background-color: whitesmoke;">บ้านฉาง - ระยอง</td>
+                <td style="color: #000f64; background-color: whitesmoke;">05:00 น.</td>
+                <td style="color: #000f64; background-color: whitesmoke;">17:10 น.</td>
+            </tr>
+            <tr>
+                <td style="width: 25%; height: 45px; color: indigo; background-color: whitesmoke;">ระยอง - มาบตาพุด</td>
+                <td style="color: indigo; background-color: whitesmoke; ">06:05 น.</td>
+                <td style="color: indigo; background-color: whitesmoke; ">18:40 น.</td>
+                <td style="width: 25%; height: 45px; color: #000f64; background-color: whitesmoke;">มาบตาพุด - ระยอง</td>
+                <td style="color: #000f64; background-color: whitesmoke;">05:30 น.</td>
+                <td style="color: #000f64; background-color: whitesmoke;">17:40 น.</td>
+            </tr>
+            <tr>
+                <td style="width: 25%; height: 45px; color: indigo; background-color: whitesmoke;">ระยอง - นิคมพัฒนา</td>
+                <td style="color: indigo; background-color: whitesmoke; ">06:30 น.</td>
+                <td style="color: indigo; background-color: whitesmoke; ">19:00 น.</td>
+                <td style="width: 25%; height: 45px; color: #000f64; background-color: whitesmoke;">นิคมพัฒนา - ระยอง</td>
+                <td style="color: #000f64; background-color: whitesmoke;">05:50 น.</td>
+                <td style="color: #000f64; background-color: whitesmoke;">18:00 น.</td>
+            </tr>
+            <tr>
+                <td style="width: 25%; height: 45px; color: indigo; background-color: whitesmoke;">ระยอง - บ้านค่าย</td>
+                <td style="color: indigo; background-color: whitesmoke; ">06:40 น.</td>
+                <td style="color: indigo; background-color: whitesmoke; ">19:00 น.</td>
+                <td style="width: 25%; height: 45px; color: #000f64; background-color: whitesmoke;">บ้านค่าย - ระยอง</td>
+                <td style="color: #000f64; background-color: whitesmoke;">06:00 น.</td>
+                <td style="color: #000f64; background-color: whitesmoke;">16:30 น.</td>
+            </tr>
+            <tr>
+                <td style="width: 25%; height: 45px; color: indigo; background-color: whitesmoke;">ระยอง - เจ็ดลูกเนิน</td>
+                <td style="color: indigo; background-color: whitesmoke; ">07:30 น.</td>
+                <td style="color: indigo; background-color: whitesmoke; ">18:00 น.</td>
+                <td style="width: 25%; height: 45px; color: #000f64; background-color: whitesmoke;">เจ็ดลูกเนิน - ระยอง</td>
+                <td style="color: #000f64; background-color: whitesmoke;">05:50 น.</td>
+                <td style="color: #000f64; background-color: whitesmoke;">16:00 น.</td>
+            </tr>
+            <tr>
+                <td style="width: 25%; height: 45px; color: indigo; background-color: whitesmoke;">ระยอง - หนองผักหนาม</td>
+                <td style="color: indigo; background-color: whitesmoke; ">06:30 น.</td>
+                <td style="color: indigo; background-color: whitesmoke; ">18:00 น.</td>
+                <td style="width: 25%; height: 45px; color: #000f64; background-color: whitesmoke;">หนองผักหนาม - ระยอง</td>
+                <td style="color: #000f64; background-color: whitesmoke;">06:10 น.</td>
+                <td style="color: #000f64; background-color: whitesmoke;">16:30 น.</td>
+            </tr>
+            <tr>
+                <td style="width: 25%; height: 45px; color: indigo; background-color: whitesmoke;">ระยอง - ปากน้ำ</td>
+                <td style="color: indigo; background-color: whitesmoke; "> 06.00 น.</td>
+                <td style="color: indigo; background-color: whitesmoke; "> 18.30น.</td>
+                <td style="width: 25%; height: 45px; color: #000f64; background-color: whitesmoke;">ปากน้ำ - ระยอง</td>
+                <td style="color: #000f64; background-color: whitesmoke;">05:50 น.</td>
+                <td style="color: #000f64; background-color: whitesmoke;">19:00 น.</td>
+            </tr>
+            <tr>
+                <td style="width: 25%; height: 45px; color: indigo; background-color: whitesmoke;">ระยอง - บ้านเพ</td>
+                <td style="color: indigo; background-color: whitesmoke; ">06:30 น.</td>
+                <td style="color: indigo; background-color: whitesmoke; ">18:30 น.</td>
+                <td style="width: 25%; height: 45px; color: #000f64; background-color: whitesmoke;">บ้านเพ - ระยอง</td>
+                <td style="color: #000f64; background-color: whitesmoke;">06:00 น.</td>
+                <td style="color: #000f64; background-color: whitesmoke;">17:00 น.</td>
+            </tr>
+            <tr>
+                <td style="width: 25%; height: 45px; color: indigo; background-color: whitesmoke;">ระยอง - สามย่าน</td>
+                <td style="color: indigo; background-color: whitesmoke; ">06:30 น.</td>
+                <td style="color: indigo; background-color: whitesmoke; ">19:00 น.</td>
+                <td style="width: 25%; height: 45px; color: #000f64; background-color: whitesmoke;">สามย่าน - ระยอง</td>
+                <td style="color: #000f64; background-color: whitesmoke;">05:30 น.</td>
+                <td style="color: #000f64; background-color: whitesmoke;">17:30 น.</td>
+            </tr>
+            <tr>
+                <td style="width: 25%; height: 45px; color: indigo; background-color: whitesmoke;">ระยอง - บ้านแลง</td>
+                <td style="color: indigo; background-color: whitesmoke; ">06:30 น.</td>
+                <td style="color: indigo; background-color: whitesmoke; ">18:00 น.</td>
+                <td style="width: 25%; height: 45px; color: #000f64; background-color: whitesmoke;">บ้านแลง - ระยอง</td>
+                <td style="color: #000f64; background-color: whitesmoke;">05:20 น.</td>
+                <td style="color: #000f64; background-color: whitesmoke;">17:00 น.</td>
+            </tr>
+            <tr>
+                <td style="width: 25%; height: 45px; color: indigo; background-color: whitesmoke;">ระยอง - วังจันทร์</td>
+                <td style="color: indigo; background-color: whitesmoke; ">10:00 น.</td>
+                <td style="color: indigo; background-color: whitesmoke; ">18:20 น.</td>
+                <td style="width: 25%; height: 45px; color: #000f64; background-color: whitesmoke;">วังจันทร์ - ระยอง</td>
+                <td style="color: #000f64; background-color: whitesmoke;">05:50 น.</td>
+                <td style="color: #000f64; background-color: whitesmoke;">15:30 น.</td>
+            </tr>
+            <tr>
+                <td style="width: 25%; height: 45px; color: indigo; background-color: whitesmoke;">ระยอง - กรอกยายชา</td>
+                <td style="color: indigo; background-color: whitesmoke;">07:00 น.</td>
+                <td style="color: indigo; background-color: whitesmoke;">18:00 น.</td>
+                <td style="width: 25%; height: 45px; color: #000f64; background-color: whitesmoke;">กรอกยายชา - ระยอง</td>
+                <td style="color: #000f64; background-color: whitesmoke;">06:40 น.</td>
+                <td style="color: #000f64; background-color: whitesmoke;">16:00 น.</td>
+            </tr>
+            <tr>
+                <td style="width: 25%; height: 45px; color: indigo; background-color: whitesmoke;">ระยอง - บ้านตาสิทธิ์</td>
+                <td style="color: indigo; background-color: whitesmoke;">06:40 น.</td>
+                <td style="color: indigo; background-color: whitesmoke;">19:00 น.</td>
+                <td style="width: 25%; height: 45px; color: #000f64; background-color: whitesmoke;">บ้านตาสิทธิ์ - ระยอง</td>
+                <td style="color: #000f64; background-color: whitesmoke;">05:50 น.</td>
+                <td style="color: #000f64; background-color: whitesmoke;">17:00 น.</td>
+            </tr>
+            <br />
+
+    </center>
+    </table>
+    <p style="color: red; font-family: Kanit; font-size: 20px; text-align: left; padding: 15px 70px; ">**เวลาการเดินรถของรถโดยสารแต่ละเส้นทางอาจมีความคลาดเคลื่อน**</p>
+    <div class="content">
+        <center>
+            <div class="button">
+                <a href="สถานที่รอบเส้นทาง.html">
+                    <button>ดูสถานที่รอบเส้นทาง</button>
+
+                    <a href="คำนวณค่าโดยสาร.html">
+                        <button>คำนวณค่าโดยสาร</button>
+            </div>
+        </center>
+        <script>
+            window.onscroll = function () { myFunction() };
+
+            var navbar = document.getElementById("navbar");
+            var sticky = navbar.offsetTop;
+
+            function myFunction() {
+                if (window.pageYOffset >= sticky) {
+                    navbar.classList.add("sticky")
+                } else {
+                    navbar.classList.remove("sticky");
+                }
+            }
+        </script>
+    </div>
+
+</body>
+</html>

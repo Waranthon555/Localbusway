@@ -1,0 +1,370 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>หน้าแรก</title>
+    <style>
+        body {
+            margin: 0;
+            font-size: 35px;
+            font-family: Kanit;
+            color: indigo;
+            background-image: url('bg1.jpg');
+            background-repeat: no-repeat;
+        }
+
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 40px 100px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: 0.6s;
+            z-index: 100000;
+            font-family: Kanit;
+            background-color: indigo;
+            overflow: hidden;
+        }
+
+        .logo {
+            position: relative;
+            font-size: 1.7em;
+            cursor: default;
+            color: whitesmoke;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: 0.6s;
+            display: inline-block;
+        }
+
+        #navbar {
+            height: 75px;
+            overflow: hidden;
+            background-color: indigo;
+        }
+
+            #navbar a {
+                float: right;
+                height: 75px;
+                display: block;
+                color: #f2f2f2;
+                text-align: center;
+                padding: 18px 16px;
+                text-decoration: none;
+                font-size: 20px;
+            }
+
+                #navbar a:hover {
+                    background-color: #ddd;
+                    color: black;
+                }
+
+        .content {
+            padding: 75px;
+        }
+
+        .sticky {
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }
+
+            .sticky + .content {
+                padding-top: 75px;
+            }
+
+        .slider {
+            width: 600px;
+            height: 300px;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .slides {
+            width: 500%;
+            height: 300px;
+            display: flex;
+            position: center;
+        }
+
+        .slide .first {
+            position: center;
+        }
+
+        .slides input {
+            display: none;
+        }
+
+        .slide {
+            width: 20%;
+            transition: 2s;
+        }
+
+            .slide img {
+                width: 100%;
+                height: 100%;
+                position: center;
+            }
+
+        /*css for manual slide navigation*/
+
+        .navigation-manual {
+            position: absolute;
+            width: 600px;
+            margin-top: -40px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .manual-btn {
+            border: 2px solid#4b0082;
+            padding: 5px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 1s;
+        }
+
+            .manual-btn:not(:last-child) {
+                margin-right: 40px;
+            }
+
+            .manual-btn:hover {
+                background: #4b0082;
+            }
+
+        #radio1:checked ~ .first {
+            margin-left: 0;
+        }
+
+        #radio2:checked ~ .first {
+            margin-left: -20%;
+        }
+
+        #radio3:checked ~ .first {
+            margin-left: -40%;
+        }
+
+        #radio4:checked ~ .first {
+            margin-left: -60%;
+        }
+        /*css for automatic navigation*/
+
+        .navigation-auto {
+            position: absolute;
+            display: flex;
+            width: 600px;
+            justify-content: center;
+            margin-top: 260px;
+        }
+
+            .navigation-auto div {
+                border: 2px solid #4b0082;
+                padding: 5px;
+                border-radius: 10px;
+                transition: 1s;
+            }
+
+                .navigation-auto div:not(:last-child) {
+                    margin-right: 40px;
+                }
+
+        #radio1:checked ~ .navigation-auto .auto-btn1 {
+            background: #4b0082;
+        }
+
+        #radio2:checked ~ .navigation-auto .auto-btn2 {
+            background: #4b0082;
+        }
+
+        #radio3:checked ~ .navigation-auto .auto-btn3 {
+            background: #4b0082;
+        }
+
+        #radio4:checked ~ .navigation-auto .auto-btn4 {
+            background: #4b0082;
+        }
+
+        .slide-container {
+            max-width: 1120px;
+            width: 100%;
+            padding: 40px 0;
+            position: center;
+        }
+
+        .slide-content {
+            position: center;
+            margin: 0 40px;
+        }
+
+        .card {
+            width: 320px;
+            border-radius: 10px;
+            background-color: indigo;
+        }
+
+        .image-content,
+        .card-content {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding: 20px 30px;
+        }
+
+        .image-content {
+            position: relative;
+            row-gap: 5px;
+            padding: 35px 10px;
+            position: center;
+        }
+
+        .overlay {
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            background-color: indigo;
+            border-radius: 25px 25px 0 25px;
+        }
+
+
+        .card-image {
+            position: relative;
+            height: 5px;
+            width: 5px;
+            border-radius: 5%;
+            background: indigo;
+            padding: 3px;
+        }
+
+            .card-image .card-img {
+                position: relative;
+                height: 1040%;
+                width: 100%;
+                object-fit: cover;
+                border-radius: 10%;
+                border: 2px solid whitesmoke;
+            }
+
+        button {
+            background-color: indigo;
+            border: 2px solid whitesmoke;
+            border-radius: 40px;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-family: Kanit;
+            font-size: medium;
+            font-weight: 600;
+            margin: 50px;
+            padding: 10px 50px;
+            transition-duration: 0.4s;
+            cursor: pointer;
+        }
+
+            button:hover {
+                background: #808080;
+                color: black;
+            }
+        .scroll-bar {
+            height: 100%;
+            width: 100px;
+            border: 1px solid#808080;
+            overflow: scroll;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div id="navbar">
+            <a href="ข้อมูลติดต่อ.html"><href ="javascript:void(0)">ข้อมูลติดต่อ</a>
+            <a href="สถานที่รอบเส้นทาง.html"><href ="javascript:void(0)">สถานที่รอบเส้นทาง</a>
+            <a href="แผนที่เส้นทางการเดินรถ.html"><href ="javascript:void(0)">แผนที่เส้นทางการเดินรถ</a>
+            <a href="หน้าแรก.html"><href ="javascript:void(0)">หน้าแรก</a>
+
+            <div class="logo">
+                <a href="หน้าแรก.html" style="text-decoration: none; color: whitesmoke; background: none;"><img src="logo6.png" alt=""></a>
+            </div>
+        </div>
+    </header>
+    <div class="content">
+        <center>
+            <h3 style="font-family: Kanit; font-size: 40px; margin: 100 0 20 0px;">Welcome To Local Bus Way</h3>
+
+            <div class="slider">
+                <div class="slides">
+                    <!--radio buttons start-->
+                    <input type="radio" name="radio-btn" id="radio1">
+                    <input type="radio" name="radio-btn" id="radio2">
+                    <input type="radio" name="radio-btn" id="radio3">
+                    <input type="radio" name="radio-btn" id="radio4">
+                    <!--radio buttons end-->
+                    <!--slide images start-->
+                    <div class="slide first">
+                        <img src="1.jpg" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="2.jpg" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="3.jpg" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="4.jpg" alt="">
+                    </div>
+                    <!--slide images end-->
+                    <!--automatic navigation start-->
+                    <div class="navigation-auto">
+                        <div class="auto-btn1"></div>
+                        <div class="auto-btn2"></div>
+                        <div class="auto-btn3"></div>
+                        <div class="auto-btn4"></div>
+                    </div>
+                    <!--automatic navigation end-->
+                </div>
+                <!--manual navigation start-->
+                <div class="navigation-manual">
+                    <label for="radio1" class="manual-btn"></label>
+                    <label for="radio2" class="manual-btn"></label>
+                    <label for="radio3" class="manual-btn"></label>
+                    <label for="radio4" class="manual-btn"></label>
+                </div>
+                <!--manual navigation end-->
+            </div>
+            <!--image slider end-->
+
+            <div class="button">
+                <a href="สถานที่รอบเส้นทาง.html">
+                    <button>ดูสถานที่รอบเส้นทาง</button>
+
+                    <a href="คำนวณค่าโดยสาร.html">
+                        <button>คำนวณค่าโดยสาร</button>
+            </div>
+        </center>
+
+
+    </div>
+
+    <script>
+        window.onscroll = function () { myFunction() };
+
+        var navbar = document.getElementById("navbar");
+        var sticky = navbar.offsetTop;
+
+        function myFunction() {
+            if (window.pageYOffset >= sticky) {
+                navbar.classList.add("sticky")
+            } else {
+                navbar.classList.remove("sticky");
+            }
+        }
+    </script>
+
+
+</body>
+</html>
